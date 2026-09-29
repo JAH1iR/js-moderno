@@ -1,0 +1,19 @@
+{
+  "name": "task-manager-js-moderno",
+  "version": "1.0.0",
+  "description": "Proyecto práctico de JavaScript Moderno: inmutabilidad, ES Modules y gestión reactiva de estado",
+  "type": "module",
+  "scripts": {
+    "start": "echo \"Abre index.html con la extensión Live Server de VS Code\""
+  },
+  "keywords": [
+    "javascript",
+    "es6",
+    "modules",
+    "immutability",
+    "observer-pattern",
+    "state-management"
+  ],
+  "author": "Erick",
+  "license": "MIT"
+}

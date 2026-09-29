@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager - JS Moderno</title>
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+  <!-- Contenedor principal semántico -->
+  <main class="container">
+    <h1>Task Manager</h1>
+
+    <!-- SECCIÓN 1: Formulario para crear nuevas tareas -->
+    <section class="card">
+      <h2>Nueva Tarea</h2>
+      <form id="form-tarea">
+        <input 
+          type="text" 
+          id="input-titulo" 
+          placeholder="¿Qué necesitas hacer?" 
+          required
+        />
+        <select id="select-prioridad">
+          <option value="baja">Prioridad Baja</option>
+          <option value="media" selected>Prioridad Media</option>
+          <option value="alta">Prioridad Alta</option>
+        </select>
+        <button type="submit">Agregar</button>
+      </form>
+    </section>
+
+    <!-- SECCIÓN 2: Barra de herramientas y filtros en tiempo real -->
+    <section class="card filtros">
+      <h2>Filtros</h2>
+      <div class="filtros-grupo">
+        <input 
+          type="text" 
+          id="input-busqueda" 
+          placeholder="Buscar tareas..."
+        />
+        <select id="select-filtro-estado">
+          <option value="todos">Todos los estados</option>
+          <option value="pendiente">Pendientes</option>
+          <option value="hecha">Hechas</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: Lista de tareas (Renderizada dinámicamente mediante JS) -->
+    <section class="card">
+      <h2>Lista de Tareas</h2>
+      <ul id="lista-tareas" class="lista"></ul>
+    </section>
+  </main>
+
+  <!--
+    type="module" habilita ES Modules (import / export) en el navegador:
+    - Se ejecuta en modo estricto ("use strict") automáticamente.
+    - Se carga de forma diferida (defer) sin bloquear el parseo del HTML.
+    - Cada archivo mantiene su propio ámbito (scope), evitando contaminar el objeto global 'window'.
+  -->
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+/* ==========================================================================
+   src/styles/main.css
+   Estilos base y componentes visuales para Task Manager - JS Moderno
+   ========================================================================== */
+
+/* 1. Reset Global y Box Sizing */
+* {
+  box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho total */
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* 2. Configuración del Lienzo (Body) */
+body {
+  background-color: #f4f6f8;
+  color: #333333;
+  padding: 2rem 1rem;
+}
+
+/* 3. Contenedor Principal (Centrado y flujo vertical) */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* 4. Tarjetas de Sección (Cards modulares) */
+.card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+}
+
+/* 5. Formularios y Grupos de Controles */
+form, .filtros-grupo {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+input[type="text"], select {
+  padding: 0.6rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  flex: 1;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  background-color: #0066cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #0052a3;
+}
+
+/* 6. Lista de Tareas */
+.lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* 7. Ítems Individuales de Tarea */
+.tarea-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+/* Estado de tarea completada: tachado y atenuación */
+.tarea-item.completada span {
+  text-decoration: line-through;
+  color: #888888;
+}
+
+/* 8. Etiquetas de Prioridad (Badges semánticos por color) */
+.badge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.badge.alta { 
+  background: #ffebee; 
+  color: #c62828; 
+}
+
+.badge.media { 
+  background: #e3f2fd; 
+  color: #1565c0; 
+}
+
+.badge.baja { 
+  background: #e8f5e9; 
+  color: #2e7d32; 
+}
+
+/* Botón de eliminación */
+.btn-eliminar {
+  background-color: #dc3545;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+.btn-eliminar:hover {
+  background-color: #bd2130;
+}
